@@ -17,15 +17,16 @@ public class Task1 {
     public static void inputFloat() {
         System.out.print("Пожалуйста введите дробное число: ");
         Float fl = null;
+        Scanner scanner = new Scanner(System.in);
         while(fl == null) {
+            scanner = new Scanner(System.in);
             try {
-                Scanner scanner = new Scanner(System.in);
                 fl = scanner.nextFloat();
                 System.out.println("Введенное число: " + fl);
             } catch (InputMismatchException e) {
-                System.out.print("Пожалуйста введите дробное число: ");
-            }
+                System.out.print("Пожалуйста введите дробное число: ");  
+            } 
         }
-            
+        scanner.close();
     }
 }
